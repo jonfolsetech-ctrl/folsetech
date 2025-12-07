@@ -19,17 +19,6 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* FolseTech AI Studio Announcement */}
-          <div className="flex justify-center mb-4">
-            <a href="https://main.d3sj94v4ydqvi0.amplifyapp.com/" target="_blank" rel="noopener noreferrer" className="block max-w-xl hover:opacity-90 hover:scale-[1.02] transition-all duration-300 cursor-pointer">
-              <img 
-                src="/folsetechaistudio.PNG" 
-                alt="FolseTech AI Studio Announcement - Mixing & Mastering, AI Beat Generation, Lyric Generation" 
-                className="w-full h-auto rounded-lg shadow-2xl"
-              />
-            </a>
-          </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="mailto:jon@folsetech.net?subject=AI%20Solutions%20Inquiry" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-block">
