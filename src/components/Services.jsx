@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
   const services = [
@@ -11,8 +12,7 @@ const Services = () => {
         </svg>
       ),
       color: "from-blue-500 to-cyan-500",
-      link: "mailto:jon@folsetech.net?subject=AI-Driven%20Web%20Design%20Inquiry",
-      detailsLink: "#ai-web-design"
+      link: "/ai-web-design"
     },
     {
       title: "Computer Vision",
@@ -24,8 +24,7 @@ const Services = () => {
         </svg>
       ),
       color: "from-purple-500 to-pink-500",
-      link: "mailto:jon@folsetech.net?subject=Computer%20Vision%20Inquiry",
-      detailsLink: "#computer-vision"
+      link: "/computer-vision"
     },
     {
       title: "Branding & Logo Design",
@@ -36,8 +35,7 @@ const Services = () => {
         </svg>
       ),
       color: "from-pink-500 to-rose-500",
-      link: "mailto:jon@folsetech.net?subject=Branding%20%26%20Logo%20Design%20Inquiry",
-      detailsLink: "#branding-logo"
+      link: "/branding-logo"
     },
     {
       title: "IT & Hardware Solutions",
@@ -48,8 +46,7 @@ const Services = () => {
         </svg>
       ),
       color: "from-indigo-500 to-purple-500",
-      link: "mailto:jon@folsetech.net?subject=IT%20%26%20Hardware%20Inquiry",
-      detailsLink: "#it-hardware"
+      link: "/it-hardware"
     },
     {
       title: "AI Strategy Consulting",
@@ -60,7 +57,7 @@ const Services = () => {
         </svg>
       ),
       color: "from-orange-500 to-red-500",
-      link: "mailto:jon@folsetech.net?subject=AI%20Strategy%20Consulting%20Inquiry"
+      link: "/ai-strategy-consulting"
     },
     {
       title: "Pricing & Availability",
@@ -71,8 +68,7 @@ const Services = () => {
         </svg>
       ),
       color: "from-teal-500 to-blue-500",
-      link: "mailto:jon@folsetech.net?subject=Pricing%20%26%20Quote%20Request",
-      detailsLink: "#pricing-availability"
+      link: "/pricing-availability"
     }
   ]
 
@@ -93,9 +89,9 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <a
+            <Link
               key={index}
-              href={service.detailsLink || service.link}
+              to={service.link}
               className="group bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer block"
             >
               {/* Icon */}
@@ -118,7 +114,7 @@ const Services = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

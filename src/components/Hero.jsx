@@ -15,10 +15,13 @@ const Hero = () => {
               <span className="text-3xl">🎨</span>
             </div>
             <p className="text-xl md:text-2xl text-white font-semibold">
-              FolseTech Full Professional AI Studio
+              FolseTech Full Professional AI Music Studio
             </p>
             <p className="text-gray-300 mt-2">
               With every futuristic AI-driven tool to mix and master your own dreams
+            </p>
+            <p className="text-purple-400 mt-2 font-semibold">
+              The only speech to singing voice song generator ever
             </p>
           </div>
 
