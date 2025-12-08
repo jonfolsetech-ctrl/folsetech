@@ -3,38 +3,53 @@ import React from 'react'
 const Services = () => {
   const services = [
     {
-      title: "Machine Learning Solutions",
-      description: "Custom ML models designed to solve your specific business challenges with predictive analytics and intelligent automation.",
+      title: "AI-Driven Web Design",
+      description: "Smart, automated websites that learn from user behavior, optimize SEO in real-time, and integrate AI tools. Built with Next.js, Tailwind CSS, and AWS Amplify for Louisiana small businesses and fast-scaling brands.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
       color: "from-blue-500 to-cyan-500",
-      link: "mailto:jon@folsetech.net?subject=Machine%20Learning%20Solutions%20Inquiry"
-    },
-    {
-      title: "Natural Language Processing",
-      description: "Advanced NLP solutions for chatbots, sentiment analysis, document processing, and language understanding.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-      ),
-      color: "from-purple-500 to-pink-500",
-      link: "mailto:jon@folsetech.net?subject=Natural%20Language%20Processing%20Inquiry"
+      link: "mailto:jon@folsetech.net?subject=AI-Driven%20Web%20Design%20Inquiry",
+      detailsLink: "#ai-web-design"
     },
     {
       title: "Computer Vision",
-      description: "Image recognition, object detection, and visual analysis solutions to transform how you process visual data.",
+      description: "Teach your systems to see and understand. Advanced vision models for object detection, facial recognition, real-time monitoring, OCR, quality control, and automation workflows that turn images into actionable intelligence.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
         </svg>
       ),
-      color: "from-green-500 to-emerald-500",
-      link: "mailto:jon@folsetech.net?subject=Computer%20Vision%20Inquiry"
+      color: "from-purple-500 to-pink-500",
+      link: "mailto:jon@folsetech.net?subject=Computer%20Vision%20Inquiry",
+      detailsLink: "#computer-vision"
+    },
+    {
+      title: "Branding & Logo Design",
+      description: "Complete brand identity creation including logos, typography, color palettes, signage concepts, and digital assets. We build cohesive visual systems that communicate expertise and professionalism.",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        </svg>
+      ),
+      color: "from-pink-500 to-rose-500",
+      link: "mailto:jon@folsetech.net?subject=Branding%20%26%20Logo%20Design%20Inquiry",
+      detailsLink: "#branding-logo"
+    },
+    {
+      title: "IT & Hardware Solutions",
+      description: "Complete IT infrastructure support, hardware upgrades, network configuration, system maintenance, and technical troubleshooting for businesses of all sizes.",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+        </svg>
+      ),
+      color: "from-indigo-500 to-purple-500",
+      link: "mailto:jon@folsetech.net?subject=IT%20%26%20Hardware%20Inquiry",
+      detailsLink: "#it-hardware"
     },
     {
       title: "AI Strategy Consulting",
@@ -48,26 +63,16 @@ const Services = () => {
       link: "mailto:jon@folsetech.net?subject=AI%20Strategy%20Consulting%20Inquiry"
     },
     {
-      title: "Data Analytics & Insights",
-      description: "Transform raw data into actionable insights with advanced analytics and intelligent reporting systems.",
+      title: "Pricing & Availability",
+      description: "Transparent pricing for AI-driven websites, branding, logos, and automation solutions. Limited monthly slots with fast turnaround times.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-      ),
-      color: "from-indigo-500 to-purple-500",
-      link: "mailto:jon@folsetech.net?subject=Data%20Analytics%20Inquiry"
-    },
-    {
-      title: "AI-Powered Automation",
-      description: "Streamline operations with intelligent automation solutions that reduce costs and improve efficiency.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
       color: "from-teal-500 to-blue-500",
-      link: "mailto:jon@folsetech.net?subject=AI%20Automation%20Inquiry"
+      link: "mailto:jon@folsetech.net?subject=Pricing%20%26%20Quote%20Request",
+      detailsLink: "#pricing-availability"
     }
   ]
 
@@ -90,7 +95,7 @@ const Services = () => {
           {services.map((service, index) => (
             <a
               key={index}
-              href={service.link}
+              href={service.detailsLink || service.link}
               className="group bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer block"
             >
               {/* Icon */}
