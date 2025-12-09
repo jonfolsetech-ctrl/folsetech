@@ -5,17 +5,22 @@ const Hero = () => {
     <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
-          {/* Coming Soon Announcement */}
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-6 mb-8 backdrop-blur-lg">
+          {/* Music Studio Announcement */}
+          <a 
+            href="https://main.d1nacdggybplre.amplifyapp.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-6 mb-8 backdrop-blur-lg hover:from-purple-600/30 hover:to-pink-600/30 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-[1.02] cursor-pointer"
+          >
             <div className="flex items-center justify-center gap-3 mb-2">
               <span className="text-3xl">🎵</span>
               <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Coming Soon
+                Now Available!
               </h2>
               <span className="text-3xl">🎨</span>
             </div>
             <p className="text-xl md:text-2xl text-white font-semibold">
-              FolseTech Full Professional AI Music Studio
+              FolseTech Pro AI Music Studio
             </p>
             <p className="text-gray-300 mt-2">
               With every futuristic AI-driven tool to mix and master your own dreams
@@ -23,7 +28,10 @@ const Hero = () => {
             <p className="text-purple-400 mt-2 font-semibold">
               The only speech to singing voice song generator ever
             </p>
-          </div>
+            <p className="text-blue-400 mt-3 text-sm font-medium">
+              Click to explore now →
+            </p>
+          </a>
 
           {/* Main Heading */}
           <div className="space-y-4">
