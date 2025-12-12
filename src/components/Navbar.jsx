@@ -40,6 +40,9 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('services')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Services
               </button>
+              <Link to="/ai-music-production" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                AI Music
+              </Link>
               <button onClick={() => handleNavClick('about')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </button>
@@ -79,6 +82,9 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('services')} className="text-gray-300 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
                 Services
               </button>
+              <Link to="/ai-music-production" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
+                AI Music Production
+              </Link>
               <button onClick={() => handleNavClick('about')} className="text-gray-300 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
                 About
               </button>
