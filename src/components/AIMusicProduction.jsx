@@ -59,33 +59,56 @@ const AIMusicProduction = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white pt-20">
-      {/* Music Studio Announcement */}
+      {/* FolseTech Pro AI Music Studio Announcement */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
         <a 
           href="https://main.d1nacdggybplre.amplifyapp.com/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="block bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-lg hover:from-purple-600/30 hover:to-pink-600/30 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-[1.02] cursor-pointer"
+          className="block relative overflow-hidden rounded-lg p-4 transition-all duration-300 transform hover:scale-[1.01] cursor-pointer"
         >
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="text-3xl">🎵</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              Now Available!
-            </h2>
-            <span className="text-3xl">🎨</span>
+          {/* Floating Musical Notes */}
+          <div className="absolute inset-0 pointer-events-none">
+            <span className="absolute text-2xl opacity-30 animate-float" style={{left: '10%', top: '20%', animationDelay: '0s'}}>🎵</span>
+            <span className="absolute text-xl opacity-20 animate-float" style={{left: '85%', top: '60%', animationDelay: '1s'}}>🎶</span>
+            <span className="absolute text-lg opacity-25 animate-float" style={{left: '15%', top: '70%', animationDelay: '2s'}}>🎼</span>
+            <span className="absolute text-2xl opacity-20 animate-float" style={{left: '90%', top: '25%', animationDelay: '1.5s'}}>♪</span>
+            <span className="absolute text-xl opacity-30 animate-float" style={{left: '5%', top: '45%', animationDelay: '0.5s'}}>♫</span>
           </div>
-          <p className="text-xl md:text-2xl text-white font-semibold">
-            FolseTech Pro AI Music Studio
-          </p>
-          <p className="text-gray-300 mt-2">
-            With every futuristic AI-driven tool to mix and master your own dreams
-          </p>
-          <p className="text-purple-400 mt-2 font-semibold">
-            The only speech to singing voice song generator ever
-          </p>
-          <p className="text-blue-400 mt-3 text-sm font-medium">
-            Click to explore now →
-          </p>
+          
+          {/* Floating Dollar Signs */}
+          <div className="absolute inset-0 pointer-events-none">
+            <span className="absolute text-2xl opacity-30 text-green-400 animate-float-slow" style={{left: '20%', top: '15%', animationDelay: '0s'}}>💰</span>
+            <span className="absolute text-xl opacity-25 text-green-400 animate-float-slow" style={{left: '80%', top: '70%', animationDelay: '2s'}}>💵</span>
+            <span className="absolute text-lg opacity-20 text-green-400 animate-float-slow" style={{left: '25%', top: '80%', animationDelay: '1s'}}>💸</span>
+            <span className="absolute text-2xl opacity-25 text-green-400 animate-float-slow" style={{left: '75%', top: '30%', animationDelay: '1.5s'}}>💲</span>
+          </div>
+
+          <div className="relative z-10">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <span className="text-3xl animate-bounce">🎵</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
+                <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+                  Coming Soon - Try Our Beta
+                </span>
+              </h2>
+              <span className="text-3xl animate-bounce" style={{animationDelay: '0.2s'}}>🎨</span>
+            </div>
+            <p className="text-xl md:text-2xl text-white font-bold mb-3 text-center">
+              🚀 FolseTech Pro AI-Driven Music Studio
+            </p>
+            <p className="text-base md:text-lg text-gray-200 text-center mb-3">
+              Every futuristic AI tool to mix and master your dreams
+            </p>
+            <p className="text-base md:text-lg text-purple-300 font-bold text-center mb-4">
+              ✨ The only speech-to-singing voice song generator ever
+            </p>
+            <div className="flex justify-center">
+              <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full text-sm md:text-base font-bold hover:from-blue-600 hover:to-purple-600 transition-all">
+                Launch Studio Now →
+              </span>
+            </div>
+          </div>
         </a>
       </section>
 
