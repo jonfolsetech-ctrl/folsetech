@@ -26,8 +26,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-white">
-              FolseTech <span className="text-blue-500">AI Solutions</span>
+            <span className="text-2xl font-bold">
+              <span className="text-orange-500">FolseTech</span> <span className="text-white">AI Solutions</span>
             </span>
           </Link>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('contact')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </button>
-              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">
+              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">
                 Get Started
               </a>
             </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('contact')} className="text-gray-300 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </button>
-              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="w-full text-left bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors block">
+              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="w-full text-left bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors block">
                 Get Started
               </a>
             </div>

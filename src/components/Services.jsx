@@ -127,7 +127,7 @@ const Services = () => {
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI solutions can drive innovation and growth for your organization.
             </p>
-            <a href="mailto:jon@folsetech.net?subject=Consultation%20Request" className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            <a href="mailto:jon@folsetech.net?subject=Consultation%20Request" className="inline-block bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Schedule a Consultation
             </a>
           </div>

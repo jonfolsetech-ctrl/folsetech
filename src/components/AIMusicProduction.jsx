@@ -62,7 +62,7 @@ const AIMusicProduction = () => {
       {/* FolseTech Pro AI Music Studio Announcement */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
         <a 
-          href="https://main.d1nacdggybplre.amplifyapp.com/" 
+          href="https://main.djmotltu1oq0o.amplifyapp.com/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="block relative overflow-hidden rounded-lg p-4 transition-all duration-300 transform hover:scale-[1.01] cursor-pointer"
@@ -88,7 +88,7 @@ const AIMusicProduction = () => {
             <div className="flex items-center justify-center gap-3 mb-3">
               <span className="text-3xl animate-bounce">🎵</span>
               <h2 className="text-2xl md:text-3xl font-bold text-white">
-                <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-orange-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
                   Coming Soon - Try Our Beta
                 </span>
               </h2>
@@ -104,7 +104,7 @@ const AIMusicProduction = () => {
               ✨ The only speech-to-singing voice song generator ever
             </p>
             <div className="flex justify-center">
-              <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full text-sm md:text-base font-bold hover:from-blue-600 hover:to-purple-600 transition-all">
+              <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-white px-6 py-3 rounded-full text-sm md:text-base font-bold hover:from-orange-600 hover:to-purple-600 transition-all">
                 Launch Studio Now →
               </span>
             </div>
@@ -116,9 +116,9 @@ const AIMusicProduction = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <div className="flex justify-center mb-6">
-            <Music className="w-20 h-20 text-blue-500 animate-pulse" />
+            <Music className="w-20 h-20 text-orange-500 animate-pulse" />
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             AI Music Production
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -127,7 +127,7 @@ const AIMusicProduction = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:jon@folsetech.net?subject=AI%20Music%20Production%20Inquiry" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
             >
               Start Creating Music
             </a>
@@ -152,9 +152,9 @@ const AIMusicProduction = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all transform hover:scale-105"
+              className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl border border-gray-700 hover:border-orange-500 transition-all transform hover:scale-105">
             >
-              <div className="text-blue-500 mb-4">
+              <div className="text-orange-500 mb-4">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
@@ -162,7 +162,7 @@ const AIMusicProduction = () => {
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
-                    <span className="text-blue-500 mr-2">✓</span>
+                    <span className="text-orange-500 mr-2">✓</span>
                     {feature}
                   </li>
                 ))}
@@ -183,7 +183,7 @@ const AIMusicProduction = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="flex justify-center mb-4 text-blue-500">
+                <div className="flex justify-center mb-4 text-orange-500">
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
@@ -215,7 +215,7 @@ const AIMusicProduction = () => {
 
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
+        <div className="bg-gradient-to-r from-orange-600 to-purple-600 rounded-2xl p-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Revolutionize Your Music?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join the next generation of music producers using AI to create incredible sounds

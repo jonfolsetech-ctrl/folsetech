@@ -54,7 +54,7 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-500/20">
+            <div className="bg-gradient-to-r from-orange-600/20 to-purple-600/20 rounded-2xl p-8 border border-orange-500/20">
               <h3 className="text-2xl font-bold text-white mb-6">Our Mission</h3>
               <blockquote className="text-lg text-gray-300 italic leading-relaxed">
                 "To empower businesses with intelligent solutions that drive innovation, 
