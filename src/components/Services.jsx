@@ -92,7 +92,7 @@ const Services = () => {
             <Link
               key={index}
               to={service.link}
-              className="group bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 border border-gray-700 hover:border-gray-500 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer block"
+              className="group bg-gray-800/50 backdrop-blur-lg rounded-xl p-8 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer block"
             >
               {/* Icon */}
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300`}>
@@ -100,7 +100,7 @@ const Services = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-purple-500 transition-all duration-300">
                 {service.title}
               </h3>
               <p className="text-gray-400 leading-relaxed mb-6">
@@ -108,7 +108,7 @@ const Services = () => {
               </p>
 
               {/* Learn More Link */}
-              <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+              <div className="flex items-center text-orange-400 group-hover:text-orange-300 transition-colors duration-300">
                 <span className="font-medium">Learn More</span>
                 <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -120,7 +120,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-orange-600/10 to-purple-600/10 border border-orange-500/20 rounded-2xl p-8">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>

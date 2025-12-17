@@ -86,7 +86,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
               <span className="text-2xl font-bold text-white">
-                FolseTech <span className="text-blue-500">AI Solutions</span>
+                FolseTech <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-500">AI Solutions</span>
               </span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
@@ -99,7 +99,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
+                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-orange-600 hover:to-purple-600 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -143,9 +143,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap">
+              <button className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap">
                 Subscribe
               </button>
             </div>
