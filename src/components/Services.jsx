@@ -109,7 +109,7 @@ const Services = () => {
 
               {/* Learn More Link */}
               <div className="flex items-center text-orange-400 group-hover:text-orange-300 transition-colors duration-300">
-                <span className="font-medium">Learn More</span>
+                <span className="font-medium">🔥 Learn More</span>
                 <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -120,15 +120,15 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-orange-600/10 to-purple-600/10 border border-orange-500/20 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-orange-600/10 to-yellow-400/10 border border-orange-500/20 rounded-2xl p-8">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI solutions can drive innovation and growth for your organization.
             </p>
-            <a href="mailto:jon@folsetech.net?subject=Consultation%20Request" className="inline-block bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Schedule a Consultation
+            <a href="mailto:jon@folsetech.net?subject=Consultation%20Request" className="inline-block bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-400/60 hover:from-orange-700 hover:via-orange-600 hover:to-yellow-500/70 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/50">
+              🔥 Schedule a Consultation
             </a>
           </div>
         </div>

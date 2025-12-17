@@ -47,8 +47,8 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('contact')} className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </button>
-              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">
-                Get Started
+              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="bg-gradient-to-r from-orange-600 to-yellow-400/60 hover:from-orange-700 hover:to-yellow-500/70 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block shadow-lg shadow-orange-500/30">
+                🔥 Get Started
               </a>
             </div>
           </div>
@@ -89,8 +89,8 @@ const Navbar = () => {
               <button onClick={() => handleNavClick('contact')} className="text-gray-300 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </button>
-              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="w-full text-left bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors block">
-                Get Started
+              <a href="mailto:jon@folsetech.net?subject=Get%20Started%20Inquiry" className="w-full text-left bg-gradient-to-r from-orange-600 to-yellow-400/60 hover:from-orange-700 hover:to-yellow-500/70 text-white px-3 py-2 rounded-md text-base font-medium transition-colors block shadow-lg shadow-orange-500/30">
+                🔥 Get Started
               </a>
             </div>
           </div>

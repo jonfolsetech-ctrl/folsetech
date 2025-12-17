@@ -11,16 +11,17 @@ export default {
             DEFAULT: '#ea580c',
             dark: '#c2410c',
           },
-          purple: {
-            light: '#c084fc',
-            DEFAULT: '#9333ea',
-            dark: '#7e22ce',
+          yellow: {
+            light: '#fde047',
+            DEFAULT: '#facc15',
+            dark: '#eab308',
           }
         }
       },
       backgroundImage: {
-        'brand-gradient': 'linear-gradient(to right, #ea580c, #9333ea)',
-        'brand-gradient-hover': 'linear-gradient(to right, #c2410c, #7e22ce)',
+        'brand-gradient': 'linear-gradient(to right, #ea580c, rgba(250, 204, 21, 0.6))',
+        'brand-gradient-hover': 'linear-gradient(to right, #c2410c, rgba(234, 179, 8, 0.6))',
+        'flame-pattern': 'radial-gradient(ellipse at bottom, #ea580c 0%, rgba(250, 204, 21, 0.6) 50%, transparent 70%)',
       }
     },
   },

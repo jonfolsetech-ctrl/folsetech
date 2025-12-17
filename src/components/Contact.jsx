@@ -156,9 +156,9 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="w-full bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-400/60 hover:from-orange-700 hover:via-orange-600 hover:to-yellow-500/70 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/50"
               >
-                Send Message
+                🔥 Send Message
               </button>
             </form>
           </div>
@@ -170,7 +170,7 @@ const Contact = () => {
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-600 to-purple-600 rounded-lg flex items-center justify-center text-white">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-600 to-yellow-400/60 rounded-lg flex items-center justify-center text-white">
                       {item.icon}
                     </div>
                     <div>
@@ -193,7 +193,7 @@ const Contact = () => {
                   <span>Start Live Chat</span>
                 </button>
                 
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center space-x-2">
+                <button className="w-full bg-gradient-to-r from-yellow-500/80 to-yellow-400/60 hover:from-yellow-600/90 hover:to-yellow-500/70 text-gray-900 font-bold px-6 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
@@ -203,7 +203,7 @@ const Contact = () => {
             </div>
 
             {/* FAQ Snippet */}
-            <div className="bg-gradient-to-r from-orange-600/20 to-purple-600/20 border border-orange-500/20 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-orange-600/20 to-yellow-400/10 border border-orange-500/20 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-white mb-4">Frequently Asked Questions</h3>
               <div className="space-y-3 text-sm">
                 <p className="text-gray-300">
