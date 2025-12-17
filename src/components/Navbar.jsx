@@ -21,14 +21,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
+    <nav className="fixed w-full bg-transparent backdrop-blur-md z-50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold">
-              <span className="text-orange-500">FolseTech</span> <span className="text-white">AI Solutions</span>
-            </span>
+            <img src="/newlogocropped.png" alt="FolseTech" className="h-20 w-auto max-w-xs" />
           </Link>
 
           {/* Desktop Navigation */}
