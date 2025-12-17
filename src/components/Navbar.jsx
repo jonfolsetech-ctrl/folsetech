@@ -23,9 +23,9 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-transparent backdrop-blur-md z-50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 md:justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
             <img src="/newlogocropped.png" alt="FolseTech" className="h-20 w-auto max-w-xs" />
           </Link>
 
