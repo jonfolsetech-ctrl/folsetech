@@ -10,6 +10,7 @@ import ITHardware from './components/ITHardware'
 import AIStrategyConsulting from './components/AIStrategyConsulting'
 import PricingAvailability from './components/PricingAvailability'
 import AIMusicProduction from './components/AIMusicProduction'
+import SEOAnalytics from './components/SEOAnalytics'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -36,6 +37,7 @@ function App() {
           <Route path="/ai-strategy-consulting" element={<AIStrategyConsulting />} />
           <Route path="/pricing-availability" element={<PricingAvailability />} />
           <Route path="/ai-music-production" element={<AIMusicProduction />} />
+          <Route path="/seo-analytics" element={<SEOAnalytics />} />
         </Routes>
         <Footer />
       </div>
