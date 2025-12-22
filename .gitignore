@@ -24,3 +24,7 @@ npm-debug.log*
 inputs/
 *.pyc
 __pycache__/
+*.zip
+*.png
+*.jpg
+*.jpeg
