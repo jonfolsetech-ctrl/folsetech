@@ -34,10 +34,10 @@ const Contact = () => {
       } else if (!allowedTypes.includes(file.type)) {
         errors.push(`${file.name} has an unsupported file type`)
       } else {
-        // Add unique identifier to each file
+        // Add unique identifier to each file using timestamp and random number
         validFiles.push({
           file,
-          id: `${file.name}-${file.size}-${file.lastModified}`
+          id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
         })
       }
     })
