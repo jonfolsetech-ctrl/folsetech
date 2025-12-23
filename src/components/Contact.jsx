@@ -7,6 +7,7 @@ const Contact = () => {
     company: '',
     message: ''
   })
+  const [uploadedFiles, setUploadedFiles] = useState([])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -16,19 +17,62 @@ const Contact = () => {
     }))
   }
 
+  const handleFileUpload = (e) => {
+    const files = Array.from(e.target.files)
+    const maxSize = 10 * 1024 * 1024 // 10MB
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain']
+    
+    const validFiles = files.filter(file => {
+      if (file.size > maxSize) {
+        alert(`${file.name} is too large. Maximum file size is 10MB.`)
+        return false
+      }
+      if (!allowedTypes.includes(file.type)) {
+        alert(`${file.name} has an unsupported file type. Please upload images, PDFs, or documents.`)
+        return false
+      }
+      return true
+    })
+
+    setUploadedFiles(prev => [...prev, ...validFiles])
+    e.target.value = '' // Reset input
+  }
+
+  const removeFile = (index) => {
+    setUploadedFiles(prev => prev.filter((_, i) => i !== index))
+  }
+
+  const formatFileSize = (bytes) => {
+    if (bytes === 0) return '0 Bytes'
+    const k = 1024
+    const sizes = ['Bytes', 'KB', 'MB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i]
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     // Create email with form data
     const subject = encodeURIComponent('AI Solutions Inquiry from ' + formData.name)
-    const body = encodeURIComponent(
+    let body = 
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
       `Company: ${formData.company}\n\n` +
       `Message: ${formData.message}`
-    )
-    window.location.href = `mailto:jon@folsetech.net?subject=${subject}&body=${body}`
+    
+    // Add file information if files are attached
+    if (uploadedFiles.length > 0) {
+      body += `\n\nAttached Files (${uploadedFiles.length}):\n`
+      uploadedFiles.forEach((file, index) => {
+        body += `${index + 1}. ${file.name} (${formatFileSize(file.size)})\n`
+      })
+      body += '\nNote: Please reply to this email and the sender will share the files with you.'
+    }
+    
+    window.location.href = `mailto:jon@folsetech.net?subject=${subject}&body=${encodeURIComponent(body)}`
     // Reset form
     setFormData({ name: '', email: '', company: '', message: '' })
+    setUploadedFiles([])
   }
 
   const contactInfo = [
@@ -152,6 +196,67 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell us about your project and how we can help..."
                 ></textarea>
+              </div>
+
+              {/* File Upload Section */}
+              <div>
+                <label htmlFor="fileUpload" className="block text-sm font-medium text-gray-300 mb-2">
+                  Attach Files (Optional)
+                </label>
+                <div className="relative">
+                  <input
+                    type="file"
+                    id="fileUpload"
+                    multiple
+                    onChange={handleFileUpload}
+                    className="hidden"
+                    accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.txt"
+                  />
+                  <label
+                    htmlFor="fileUpload"
+                    className="w-full flex items-center justify-center px-4 py-3 bg-gray-900/50 border-2 border-dashed border-gray-600 rounded-lg text-gray-400 hover:border-orange-500 hover:text-orange-400 cursor-pointer transition-all duration-300"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <span className="text-sm">Click to upload or drag and drop</span>
+                  </label>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">
+                  Images, PDFs, or documents up to 10MB
+                </p>
+
+                {/* Display uploaded files */}
+                {uploadedFiles.length > 0 && (
+                  <div className="mt-4 space-y-2">
+                    {uploadedFiles.map((file, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center justify-between bg-gray-900/50 border border-gray-600 rounded-lg px-4 py-2"
+                      >
+                        <div className="flex items-center space-x-3 flex-1 min-w-0">
+                          <svg className="w-5 h-5 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm text-white truncate">{file.name}</p>
+                            <p className="text-xs text-gray-400">{formatFileSize(file.size)}</p>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => removeFile(index)}
+                          className="ml-4 text-red-400 hover:text-red-300 transition-colors duration-200 flex-shrink-0"
+                          aria-label="Remove file"
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <button
