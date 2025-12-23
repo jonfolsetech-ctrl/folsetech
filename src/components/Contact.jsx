@@ -8,6 +8,7 @@ const Contact = () => {
     message: ''
   })
   const [uploadedFiles, setUploadedFiles] = useState([])
+  const [uploadError, setUploadError] = useState('')
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -22,24 +23,35 @@ const Contact = () => {
     const maxSize = 10 * 1024 * 1024 // 10MB
     const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain']
     
-    const validFiles = files.filter(file => {
+    setUploadError('') // Clear previous errors
+    
+    const validFiles = []
+    const errors = []
+    
+    files.forEach(file => {
       if (file.size > maxSize) {
-        alert(`${file.name} is too large. Maximum file size is 10MB.`)
-        return false
+        errors.push(`${file.name} is too large (max 10MB)`)
+      } else if (!allowedTypes.includes(file.type)) {
+        errors.push(`${file.name} has an unsupported file type`)
+      } else {
+        // Add unique identifier to each file
+        validFiles.push({
+          file,
+          id: `${file.name}-${file.size}-${file.lastModified}`
+        })
       }
-      if (!allowedTypes.includes(file.type)) {
-        alert(`${file.name} has an unsupported file type. Please upload images, PDFs, or documents.`)
-        return false
-      }
-      return true
     })
-
+    
+    if (errors.length > 0) {
+      setUploadError(errors.join('. '))
+    }
+    
     setUploadedFiles(prev => [...prev, ...validFiles])
     e.target.value = '' // Reset input
   }
 
-  const removeFile = (index) => {
-    setUploadedFiles(prev => prev.filter((_, i) => i !== index))
+  const removeFile = (id) => {
+    setUploadedFiles(prev => prev.filter(item => item.id !== id))
   }
 
   const formatFileSize = (bytes) => {
@@ -63,8 +75,8 @@ const Contact = () => {
     // Add file information if files are attached
     if (uploadedFiles.length > 0) {
       body += `\n\nAttached Files (${uploadedFiles.length}):\n`
-      uploadedFiles.forEach((file, index) => {
-        body += `${index + 1}. ${file.name} (${formatFileSize(file.size)})\n`
+      uploadedFiles.forEach((item, index) => {
+        body += `${index + 1}. ${item.file.name} (${formatFileSize(item.file.size)})\n`
       })
       body += '\nNote: Please reply to this email and the sender will share the files with you.'
     }
@@ -73,6 +85,7 @@ const Contact = () => {
     // Reset form
     setFormData({ name: '', email: '', company: '', message: '' })
     setUploadedFiles([])
+    setUploadError('')
   }
 
   const contactInfo = [
@@ -219,19 +232,26 @@ const Contact = () => {
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                     </svg>
-                    <span className="text-sm">Click to upload or drag and drop</span>
+                    <span className="text-sm">Click to upload files</span>
                   </label>
                 </div>
                 <p className="text-xs text-gray-500 mt-1">
                   Images, PDFs, or documents up to 10MB
                 </p>
 
+                {/* Display error message */}
+                {uploadError && (
+                  <div className="mt-2 p-3 bg-red-900/20 border border-red-500/50 rounded-lg">
+                    <p className="text-sm text-red-400">{uploadError}</p>
+                  </div>
+                )}
+
                 {/* Display uploaded files */}
                 {uploadedFiles.length > 0 && (
                   <div className="mt-4 space-y-2">
-                    {uploadedFiles.map((file, index) => (
+                    {uploadedFiles.map((item) => (
                       <div
-                        key={index}
+                        key={item.id}
                         className="flex items-center justify-between bg-gray-900/50 border border-gray-600 rounded-lg px-4 py-2"
                       >
                         <div className="flex items-center space-x-3 flex-1 min-w-0">
@@ -239,13 +259,13 @@ const Contact = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                           </svg>
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm text-white truncate">{file.name}</p>
-                            <p className="text-xs text-gray-400">{formatFileSize(file.size)}</p>
+                            <p className="text-sm text-white truncate">{item.file.name}</p>
+                            <p className="text-xs text-gray-400">{formatFileSize(item.file.size)}</p>
                           </div>
                         </div>
                         <button
                           type="button"
-                          onClick={() => removeFile(index)}
+                          onClick={() => removeFile(item.id)}
                           className="ml-4 text-red-400 hover:text-red-300 transition-colors duration-200 flex-shrink-0"
                           aria-label="Remove file"
                         >
