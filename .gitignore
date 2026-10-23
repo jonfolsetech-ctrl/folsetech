@@ -25,6 +25,3 @@ inputs/
 *.pyc
 __pycache__/
 *.zip
-*.png
-*.jpg
-*.jpeg
